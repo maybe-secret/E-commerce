@@ -1,0 +1,133 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+}
+
+/* Fonts */
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.container-bootstrap {
+  @apply w-full px-3 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px];
+}
+
+.container {
+  @apply mx-auto px-4 max-w-[1320px];
+}
+
+
+.countryList {
+  overflow-y: hidden !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Banner slider dot */
+.banner-slider .slick-dots {
+  @apply absolute bottom-5 left-1/2 -translate-x-1/2 flex justify-center items-center z-10 list-none;
+  display: flex !important; /* enforce flex */
+  gap: 0.5rem; /* slightly tighter spacing */
+}
+
+.banner-slider .slick-dots li {
+  @apply md:w-2 md:h-2 h-0.5 w-0.5; /* reduced size */
+  margin: 0 0.5rem; /* small margin fallback */
+}
+
+.banner-slider .slick-dots li button {
+  @apply w-full h-full bg-white/40 rotate-45 transition-transform duration-300 ease-in-out cursor-pointer border-none outline-none;
+}
+
+.banner-slider .slick-dots li button::before {
+  content: none;
+}
+
+.banner-slider .slick-dots li.slick-active button {
+  @apply bg-[#2BBEF9] scale-125 shadow-md shadow-[#2BBEF9]/70;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: rotate(45deg) scale(1.25);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(45deg) scale(1.4);
+    opacity: 0.8;
+  }
+}
+
+
+/* Slick slider arrow styling */
+.slick-prev {
+  left: 10px !important;  /* move arrow inward from the left */
+  z-index: 10;            /* ensure it appears above slides */
+}
+
+.slick-next {
+  right: 10px !important; /* move arrow inward from the right */
+  z-index: 10;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #00000080 !important;  /* dark arrow color */
+  opacity: 1 !important;
+}
+
+/* Add this to your CSS or global stylesheet */
+.swiper-button-prev,
+.swiper-button-next {
+  color: black;           /* arrow color */
+  background: white;      /* background color */
+  border-radius: 50%;     /* make them round */
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: white;
+  background: black;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Optional: change arrow size */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 10px !important; /* default is 20–25px */
+}
+
+/* Featred icon */
+@media (hover: hover) {
+  .img:hover {
+    box-shadow: var(--hover-shadow) !important;
+  }
+}
+
+.slick-list {
+  overflow: visible !important;
+}
+.slick-list {
+  margin: 0 -8px; /* prevent outer padding from pushing content */
+}
+.slick-slide {
+  padding: 0 15px; /* 8px gap between slides */
+}
+
