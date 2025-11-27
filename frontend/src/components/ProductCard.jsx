@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
-import { FaPlus, FaMinus, FaRegHeart } from "react-icons/fa";
+import {FaRegHeart } from "react-icons/fa";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import ProductModal from "./ProductModal";
 
@@ -25,13 +25,13 @@ const ProductCard = ({ img }) => {
 
 
   return (
-    <div className="group w-full max-w-[220px] bg-white border border-gray-200 rounded-lg p-3 transition-all duration-200 hover:shadow-md hover:-translate-y-[2px]">
+    <div className="group w-full max-w-[220px] bg-white border border-gray-200 rounded-lg p-3 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5">
       {/* image */}
       <div className="relative overflow-hidden rounded-md">
         <img
           src={img}
           alt="product"
-          className="w-full h-[200px] object-cover rounded-md transition-transform duration-300 ease-in-out group-hover:scale-105"
+          className="w-full h-[200px] object-cover object-top rounded-md transition-transform duration-300 ease-in-out group-hover:scale-105"
         />
 
         {/* discount badge */}
