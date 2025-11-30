@@ -40,9 +40,21 @@ const Home = () => {
         <div className="mx-auto max-w-[1320px] px-4 flex lg:flex-row flex-col-reverse overflow-visible items-start lg:justify-between">
           <div className="addvertisement lg:w-[23%] w-full flex flex-col gap-7 sticky top-5 self-start">
             {/* side banner img */}
-            <img src={sideImg} className="rounded-md object-contain" alt="" />
+            <div className="rounded-xl overflow-hidden shadow-md">
+              <img
+                src={sideImg}
+                className="w-full object-cover"
+                alt="Ad Banner"
+              />
+            </div>
 
-            <img src={ban2} className="rounded-md" alt="" />
+            <div className="rounded-xl overflow-hidden shadow-md">
+              <img
+                src={ban2}
+                className="w-full object-cover"
+                alt="Ad Banner 2"
+              />
+            </div>
           </div>
 
           <div className="lg:w-[75%] w-full flex flex-col gap-6">
@@ -117,8 +129,12 @@ const Home = () => {
             </div>
 
             {/* Advertisement */}
-            <div className="rounded-lg">
-              <img src={ban5} className="rounded-lg" alt="" />
+            <div className="rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.005]">
+              <img
+                src={ban5}
+                className="w-full object-cover"
+                alt="Mid-section promotion"
+              />
             </div>
 
             {/* Best seller section */}
